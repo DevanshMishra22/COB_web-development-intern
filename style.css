@@ -1,0 +1,224 @@
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+:root{
+--var-primary-color: #1e6fc1;
+}
+html{
+    font-size: 63%;
+}
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 3rem;
+}
+p{
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+.btn, input[type="submit"]{
+    border: 2px solid #fff;
+    outline: none;
+    padding: 1.6rem 1.2rem;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    initial-letter: 0.05rem;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+
+}
+                                            
+ .signup-header, .home-header{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+ }
+
+ .container{
+    height: 10vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-radius: 15px;
+ }
+ .logo a{
+font-size: 17px;
+font-weight: 600;
+color: #fff;
+text-decoration: none;
+
+ }
+ ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-size: 15px;
+    font-weight: 600;
+ }
+ li > a{
+    color: #fff;
+    text-decoration: none;
+ }
+   /* REGISTRATION PAGE  */
+   main{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .signup, .login{
+    min-height: 40rem;
+   min-width: 60vw;
+    background-color:#ffffff;
+   }
+   .grid-two--column{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+   }
+   .form-text{
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)), url('login.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 3rem 2rem;
+    
+   }
+   .login .form-text {
+    background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.3)), url('login2.png');
+    background-position: center;
+    background-size: cover;
+
+   }
+   .form-text p{
+    width: 30ch;
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+   }
+   .form-text button{
+    background-color: #fff;
+    color: #000;
+    height: 32px;
+    width: 103px;
+   }
+   .form-text button:hover{
+    background-color: transparent;
+    color: #fff;
+   }
+   .signup-form, .login-form{
+    width: 100%;
+    min-height: 50vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   }
+   .signup-form p, .login-formp{
+    margin: 1rem 0 .7rem 0;
+   }
+   .social-icons{
+    display: flex;
+    gap: .15rem;
+    margin: 1rem 0 .5rem 0;
+
+   }
+   .fa-brands{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: .1rem solid #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+   }
+   input{
+    width: 20rem;
+    margin: .6rem 0;
+    border: none;
+    background-color: #e9e9e9;
+    padding: 1rem 1.7rem;
+   }
+   input[type="submit"]{
+    margin-top: 1rem;
+    min-width: 10rem;
+    background-color: var(--var-primary-color);
+    color: #fff;
+   }
+   .signup:not(.login-section--display){
+    display: none;
+   }
+   .login-section--display .signup{
+   display: block;
+   }
+   .login-section--display .login{
+display: none;
+   }
+   /* Home page  */
+   .hero-section .container{
+    height: inherit;
+
+   }
+   .hero-content{
+    color: #fff;
+    text-align: center;
+   }
+   .hero-content button{
+    margin-top: 1.8rem;
+    background-color: var(--var-primary-color);
+    border: none;
+    padding: 1rem 2rem;
+   }
+   .hero-content button:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+   }
+   .hero-content p{
+    text-transform: uppercase;
+    margin-bottom: 1.1rem;
+    font-size: 1.4rem;
+
+   }
+   @media screen and (max-width:768px) {
+    .grid-two--column{
+        grid-template-columns: 1fr;
+    }
+    .signup-header .container, .home-header .container{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .signup-header .container .logo, .home-header .container .logo{
+        padding-top: 2rem;
+    }
+    .signup, .login{
+        min-width:90vw;
+
+    }
+    .form-text{
+        order: 1;
+    }
+    .signup, .login{
+        order: 0;
+    }
+    .form-text p{
+        width: 24ch;
+    }
+    
+   }
